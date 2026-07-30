@@ -23,8 +23,26 @@ public class CodingPracticeTracker {
             switch (choice) {
 
                 case 1:
-                    System.out.println("Add Problem feature will be implemented next.");
-                    break;
+    scanner.nextLine();
+
+    System.out.print("Enter Problem ID: ");
+    int id = scanner.nextInt();
+    scanner.nextLine();
+
+    System.out.print("Enter Problem Name: ");
+    String name = scanner.nextLine();
+
+    System.out.print("Enter Difficulty: ");
+    String difficulty = scanner.nextLine();
+
+    System.out.print("Enter Platform: ");
+    String platform = scanner.nextLine();
+
+    Problem p = new Problem(id, name, difficulty, platform);
+    problems.add(p);
+
+    System.out.println("Problem added successfully!");
+    break;
 
                 case 2:
                     System.out.println("View Problems feature will be implemented next.");
