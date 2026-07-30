@@ -45,8 +45,16 @@ public class CodingPracticeTracker {
     break;
 
                 case 2:
-                    System.out.println("View Problems feature will be implemented next.");
-                    break;
+    if (problems.isEmpty()) {
+        System.out.println("No problems found.");
+    } else {
+        System.out.println("\n===== Problem List =====");
+
+        for (Problem Problem : problems) {
+            Problem.displayProblem();
+        }
+    }
+    break;
 
                 case 3:
                     System.out.println("Search Problem feature will be implemented next.");
