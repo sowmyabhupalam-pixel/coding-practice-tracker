@@ -57,8 +57,29 @@ public class CodingPracticeTracker {
     break;
 
                 case 3:
-                    System.out.println("Search Problem feature will be implemented next.");
-                    break;
+    scanner.nextLine();
+
+    System.out.print("Enter Problem Name to Search: ");
+    String searchName = scanner.nextLine();
+
+    boolean found = false;
+
+    for (Problem problem : problems) {
+
+        if (problem.problemName.equalsIgnoreCase(searchName)) {
+
+            System.out.println("\nProblem Found!");
+            problem.displayProblem();
+            found = true;
+            break;
+        }
+    }
+
+    if (!found) {
+        System.out.println("Problem not found.");
+    }
+
+    break;
 
                 case 4:
                     System.out.println("Thank you!");
