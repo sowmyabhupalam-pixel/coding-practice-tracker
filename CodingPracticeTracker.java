@@ -14,7 +14,8 @@ public class CodingPracticeTracker {
             System.out.println("1. Add Problem");
             System.out.println("2. View Problems");
             System.out.println("3. Search Problem");
-            System.out.println("4. Exit");
+            System.out.println("4.Delete problem");
+            System.out.println("5. Exit");
 
             System.out.print("Enter your choice: ");
 
@@ -82,8 +83,30 @@ public class CodingPracticeTracker {
     break;
 
                 case 4:
-                    System.out.println("Thank you!");
-                    return;
+    scanner.nextLine();
+
+    System.out.print("Enter Problem Name to Delete: ");
+    String deleteName = scanner.nextLine();
+
+    boolean deleted = false;
+
+    for (int i = 0; i < problems.size(); i++) {
+        if (problems.get(i).problemName.equalsIgnoreCase(deleteName)) {
+            problems.remove(i);
+            deleted = true;
+            System.out.println("Problem deleted successfully!");
+            break;
+        }
+    }
+
+    if (!deleted) {
+        System.out.println("Problem not found.");
+    }
+    break;
+
+case 5:
+    System.out.println("Thank you!");
+    return;
 
                 default:
                     System.out.println("Invalid Choice!");
