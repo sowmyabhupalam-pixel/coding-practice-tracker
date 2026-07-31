@@ -16,7 +16,8 @@ public class CodingPracticeTracker {
             System.out.println("3. Search Problem");
             System.out.println("4.Delete problem");
             System.out.println("5. Update Problem");
-            System.out.println("6.Exit");
+            System.out.println("6.Count Total Problems");
+            System.out.println("7.Exit");
 
             System.out.print("Enter your choice: ");
 
@@ -137,6 +138,10 @@ case 5:
     break;
 
 case 6:
+    System.out.println("Total Problems Solved: " + problems.size());
+    break;
+
+case 7:
     System.out.println("Thank you!");
     return;
 
