@@ -15,7 +15,8 @@ public class CodingPracticeTracker {
             System.out.println("2. View Problems");
             System.out.println("3. Search Problem");
             System.out.println("4.Delete problem");
-            System.out.println("5. Exit");
+            System.out.println("5. Update Problem");
+            System.out.println("6.Exit");
 
             System.out.print("Enter your choice: ");
 
@@ -105,6 +106,37 @@ public class CodingPracticeTracker {
     break;
 
 case 5:
+    scanner.nextLine();
+
+    System.out.print("Enter Problem Name to Update: ");
+    String updateName = scanner.nextLine();
+
+    boolean updated = false;
+
+    for (Problem problem : problems) {
+
+        if (problem.problemName.equalsIgnoreCase(updateName)) {
+
+            System.out.print("Enter New Difficulty: ");
+            problem.difficulty = scanner.nextLine();
+
+            System.out.print("Enter New Platform: ");
+            problem.platform = scanner.nextLine();
+
+            updated = true;
+
+            System.out.println("Problem updated successfully!");
+            break;
+        }
+    }
+
+    if (!updated) {
+        System.out.println("Problem not found.");
+    }
+
+    break;
+
+case 6:
     System.out.println("Thank you!");
     return;
 
