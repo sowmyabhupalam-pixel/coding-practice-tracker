@@ -46,7 +46,7 @@ Coding Practice Tracker is a Java console-based application that helps users kee
 ![Delete Problem](Screenshots/delete-problem.png)
 
 ### Update Problem
-![Update Problem](Screenshots/update problem.png)
+![Update Problem](Screenshots/update-problem.png)
 
 ### Count Total Problems
 ![Count Problems](Screenshots/count-problems.png)   
